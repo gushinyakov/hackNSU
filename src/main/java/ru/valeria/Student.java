@@ -1,4 +1,4 @@
-package main.java;
+package ru.valeria;
 
 public class Student {
     private String name;private String surname;private String fathersname;private String condition;

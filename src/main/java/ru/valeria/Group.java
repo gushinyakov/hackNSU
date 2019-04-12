@@ -1,4 +1,4 @@
-package main.java;
+package ru.valeria;
 
 public class Group {
     private String name; private String link;

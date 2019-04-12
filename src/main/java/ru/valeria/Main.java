@@ -1,4 +1,4 @@
-package main.java;
+package ru.valeria;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package main.java;
+package ru.valeria;
 
 import org.w3c.dom.*;
 
@@ -41,14 +41,14 @@ public class University {
 
                 conn.setSSLSocketFactory(sc.getSocketFactory());
 
-                DocumentBuilderFactory factory = DocumentBuilderFactory.newDefaultInstance();
+                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document doc = builder.parse(conn.getInputStream());
 
                 NodeList childNodes = doc.getChildNodes();
 
                 String fileName = childNodes.item(0).getAttributes().item(0).getTextContent().split(",")[0];
-                FileWriter writer = new FileWriter(path+ "\\" +fileName + ".csv", false);
+                FileWriter writer = new FileWriter(path+ File.separator +fileName + ".csv", false);
 
                 writer.append("ФАМИЛИЯ, ОТЧЕСТВО, ИМЯ, СТАТУС\n");
                 for (int student = 0; student < childNodes.item(0).getChildNodes().getLength(); student++) {
